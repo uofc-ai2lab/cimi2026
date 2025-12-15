@@ -287,7 +287,7 @@ footer {
   display: block;
   font-size: 1.3rem;
   font-weight: 700;
-  color: #8b1d18; /* deep red text only */
+  color: #000000; /* black text */
   margin-bottom: 8px;
 }
 
