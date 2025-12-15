@@ -123,20 +123,23 @@ nav a:hover {
 .schedule-table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 20px;
+  margin-top: 15px;
 }
 
-.schedule-table th,
-.schedule-table td {
+.schedule-table th, .schedule-table td {
   border: 1px solid #ccc;
   padding: 12px;
   text-align: left;
 }
 
-.schedule-table th {
-  background-color: #f4c430;
-  color: #8b1d18;
+/* Highlighted date rows */
+.schedule-table .date-row td {
+  background-color: #f4c430; /* yellow */
   font-weight: bold;
+  text-align: center;
+  border: none; /* optional: no border for date row */
+  font-size: 1.1rem;
+  padding: 10px;
 }
 
 /* ---------------------------- */
