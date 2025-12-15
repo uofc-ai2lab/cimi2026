@@ -323,23 +323,24 @@ footer {
   text-decoration: underline;
 }
 
-#back-to-top {
-  position: fixed;      /* stays in the same spot */
-  bottom: 30px;         /* distance from bottom */
-  right: 30px;          /* distance from right */
-  background-color: #14213d; /* dark background */
-  color: #fff;          /* white arrow */
-  font-size: 24px;
-  padding: 10px 14px;
-  border-radius: 50%;
+.back-to-top-container {
   text-align: center;
-  text-decoration: none;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  transition: background 0.3s, transform 0.3s;
-  z-index: 1000;
+  margin: 30px 0;
 }
 
-#back-to-top:hover {
-  background-color: #8b1d18;  /* deep red on hover */
-  transform: translateY(-3px); /* slight lift effect */
+.back-to-top {
+  display: inline-block;
+  padding: 12px 18px;
+  background: linear-gradient(135deg, #f4c430, #8b1d18);
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 50px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.back-to-top:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
 }
