@@ -464,7 +464,7 @@ footer {
 .floating-nav-left {
   position: fixed;               /* floats while scrolling */
   top: 50%;                      /* vertical center of viewport */
-  left: 100px;                     /* distance from left edge */
+  left: 120px;                     /* distance from left edge */
   transform: translateY(-50%);    /* true vertical center */
   display: none;                  /* hidden initially, JS will show */
   flex-direction: column;
