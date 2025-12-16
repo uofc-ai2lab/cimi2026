@@ -358,7 +358,7 @@ footer {
 /* Section background */
 .speakers-section {
   background-color: #ffffff; /* pure white */
-  padding: 50px 20px; /* optional: spacing around section */
+  padding: 50px 20px; /* optional spacing around section */
 }
 
 /* Speaker list - grid layout */
@@ -371,7 +371,7 @@ footer {
   padding-top: 20px;
 }
 
-/* Rectangular card */
+/* Rectangular speaker card */
 .speaker-rect {
   display: flex;
   flex-direction: column; /* stack content vertically */
@@ -399,13 +399,13 @@ footer {
 /* Speaker image */
 .speaker-img {
   width: 100%;
-  height: 180px; /* fixed height for consistency */
+  height: 140px; /* reduced height for smaller panels */
   object-fit: cover;
 }
 
 /* Content */
 .speaker-content {
-  padding: 1.2rem 1.6rem;
+  padding: 0.8rem 1.2rem; /* reduced padding */
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -413,42 +413,42 @@ footer {
 
 /* Speaker name */
 .speaker-content h3 {
-  margin: 0 0 4px;
-  font-size: 1.2rem;
+  margin: 0 0 3px;
+  font-size: 1.15rem; /* slightly smaller */
   color: #1a4fd8;
 }
 
 /* Role/affiliation */
 .speaker-role {
-  margin: 0 0 6px;
+  margin: 0 0 4px;
   color: #555;
-  font-size: 0.9rem;
+  font-size: 0.85rem; /* slightly smaller */
 }
 
 /* Topic */
 .speaker-topic {
   font-weight: 600;
-  margin-bottom: 4px;
-  font-size: 0.95rem;
+  margin-bottom: 3px;
+  font-size: 0.9rem; /* slightly smaller */
 }
 
 /* Summary */
 .speaker-summary {
   color: #444;
-  font-size: 0.85rem; /* smaller font for fitting */
-  line-height: 1.4;
-  margin-top: auto; /* push content to fill card neatly */
+  font-size: 0.8rem; /* smaller summary text */
+  line-height: 1.35;
+  margin-top: auto; /* ensures summary stays at bottom for consistent card height */
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .speaker-img {
-    height: 160px;
+    height: 120px; /* smaller for tablets */
   }
 }
 
 @media (max-width: 480px) {
   .speaker-summary {
-    font-size: 0.8rem;
+    font-size: 0.75rem; /* smaller for mobile */
   }
 }
