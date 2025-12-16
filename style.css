@@ -458,30 +458,68 @@ footer {
 
 
 
-/* Floating Navigation Bar */
+/* ---------------------------- */
+/* Left-side Floating Navigation */
+/* ---------------------------- */
 .floating-nav-left {
-  position: fixed;
-  top: 100px; /* adjust to avoid header */
-  left: 15px;
-  display: none; /* hidden by default */
+  position: fixed;               /* floats while scrolling */
+  top: 50%;                      /* vertical center of viewport */
+  left: 15px;                     /* distance from left edge */
+  transform: translateY(-50%);    /* pull up by half its height */
+  display: none;                  /* hidden initially */
   flex-direction: column;
   gap: 12px;
-  background: #8b1d18;
-  padding: 10px 16px;
-  border-radius: 8px;
+  background: #8b1d18;           /* red background */
+  padding: 12px 18px;            /* spacing around text */
+  border-radius: 10px;
   z-index: 1000;
+  min-width: 170px;               /* ensures text fits */
+  box-sizing: border-box;         /* include padding in width */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* subtle shadow */
 }
 
+/* Links inside nav */
 .floating-nav-left a {
-  color: #fff;
+  color: #fff;                    /* white text */
   text-decoration: none;
   font-weight: 600;
-  padding: 6px 10px;
+  font-size: 1rem;                /* slightly bigger font */
+  padding: 8px 12px;              /* better spacing for readability */
+  border-radius: 5px;
   display: block;
+  transition: background 0.2s, color 0.2s, transform 0.2s;
 }
 
+/* Hover effect */
 .floating-nav-left a:hover {
+  background: #f4c430;            /* gold highlight */
+  color: #8b1d18;                 /* red text on hover */
+  transform: translateX(3px);     /* subtle movement */
+}
+
+/* Optional: active section styling */
+.floating-nav-left a.active {
   background: #f4c430;
   color: #8b1d18;
+}
+
+/* Optional: add dot before each link for extra style */
+.floating-nav-left a::before {
+  content: '•';
+  color: #f4c430;
+  margin-right: 6px;
+  font-weight: bold;
+}
+
+/* Hide nav on smaller screens */
+@media (max-width: 900px) {
+  .floating-nav-left {
+    display: none;
+  }
+}
+
+/* Smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
 }
 
