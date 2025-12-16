@@ -446,70 +446,7 @@ footer {
 
 
 
-/* Wrapper ensures nav appears only after header */
-.floating-nav-wrapper {
-  position: relative;      /* reference for sticky positioning */
-  height: 0;               /* no extra space */
-}
 
-/* Left-side floating navigation */
-.floating-nav-left {
-  position: sticky;        /* sticks within wrapper when scrolling */
-  top: 20px;               /* distance from viewport top when sticky */
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  background: #8b1d18;     /* red block */
-  padding: 10px 16px;
-  border-radius: 8px;
-  width: max-content;
-  min-width: 130px;
-  box-sizing: border-box;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  z-index: 1000;
-}
 
-/* Links inside nav */
-.floating-nav-left a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 0.95rem;
-  padding: 6px 10px;
-  border-radius: 4px;
-  display: block;
-  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
-}
 
-/* Hover effect */
-.floating-nav-left a:hover {
-  background: #f4c430;
-  color: #8b1d18;
-  transform: translateX(2px);
-}
 
-/* Active link */
-.floating-nav-left a.active {
-  background: #f4c430;
-  color: #8b1d18;
-}
-
-/* Dot before each link (optional) */
-.floating-nav-left a::before {
-  content: '•';
-  color: #f4c430;
-  margin-right: 6px;
-  font-weight: bold;
-}
-
-/* Hide on mobile */
-@media (max-width: 900px) {
-  .floating-nav-left {
-    display: none;
-  }
-}
-
-/* Smooth scrolling */
-html {
-  scroll-behavior: smooth;
-}
