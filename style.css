@@ -497,14 +497,6 @@ footer {
   color: #b22222;                /* slightly darker red for active */
 }
 
-/* Optional: dot before link */
-.floating-nav-left a::before {
-  content: '•';
-  color: #b22222;                /* deep red dot */
-  margin-right: 6px;
-  font-weight: bold;
-}
-
 /* Hide nav on smaller screens */
 @media (max-width: 900px) {
   .floating-nav-left {
