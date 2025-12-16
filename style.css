@@ -393,7 +393,7 @@ footer {
 .speaker-accent {
   width: 100%; /* full width on top */
   height: 5px;
-  background: #1a4fd8;
+  background: ##8b1d18;
 }
 
 /* Speaker image */
@@ -415,7 +415,7 @@ footer {
 .speaker-content h3 {
   margin: 0 0 3px;
   font-size: 1.15rem; /* slightly smaller */
-  color: #1a4fd8;
+  color: ##8b1d18;
 }
 
 /* Role/affiliation */
