@@ -347,3 +347,109 @@ footer {
   transform: translateY(-3px);
   box-shadow: 0 6px 12px rgba(0,0,0,0.3);
 }
+
+
+
+
+
+
+/* Speakers Section */
+#speakers {
+  background-color: #fafafa;
+}
+
+.speakers-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Speaker Panel */
+.speaker-panel {
+  display: flex;
+  gap: 2rem;
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 1.8rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.speaker-panel:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+}
+
+/* Speaker Photo */
+.speaker-photo {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* Speaker Info */
+.speaker-info {
+  flex: 1;
+}
+
+.speaker-info h3 {
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+.speaker-affiliation {
+  margin: 0.3rem 0 0.8rem;
+  color: #555;
+  font-style: italic;
+}
+
+/* Talk Title */
+.speaker-talk {
+  margin: 0.6rem 0;
+  font-weight: 500;
+}
+
+/* Bio */
+.speaker-bio {
+  margin-top: 0.6rem;
+  color: #444;
+  line-height: 1.6;
+}
+
+/* Tags */
+.speaker-tags {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tag {
+  background: #e8f0fe;
+  color: #1a4fd8;
+  padding: 0.3rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .speaker-panel {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .speaker-photo {
+    width: 140px;
+    height: 140px;
+  }
+
+  .speaker-tags {
+    justify-content: center;
+  }
+}
