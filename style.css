@@ -447,25 +447,35 @@ footer {
 
 
 /* ---------------------------- */
-/* Floating Vertical Navigation */
-/* (No JavaScript)              */
+/* Sticky Floating Navigation   */
+/* (CSS-only, Left Side)        */
 /* ---------------------------- */
+
 html {
-  scroll-behavior: smooth; /* smooth anchor scrolling */
+  scroll-behavior: smooth;
 }
 
-.floating-nav {
-  position: fixed;
-  top: 50%;
-  right: 22px;
-  transform: translateY(-50%);
+/* Wrapper appears only after header */
+.sticky-nav-wrapper {
+  position: relative;
+}
+
+/* Sticky navigation */
+.floating-nav-left {
+  position: sticky;
+  top: 40%;
+  margin-left: 15px;
+
   display: flex;
   flex-direction: column;
   gap: 14px;
-  z-index: 1000;
+
+  width: fit-content;
+  z-index: 100;
 }
 
-.floating-nav a {
+/* Navigation dots */
+.floating-nav-left a {
   width: 12px;
   height: 12px;
   border-radius: 50%;
@@ -475,16 +485,16 @@ html {
   transition: transform 0.2s ease, background 0.2s ease;
 }
 
-.floating-nav a:hover {
-  transform: scale(1.35);
+.floating-nav-left a:hover {
   background: #f4c430;
+  transform: scale(1.35);
 }
 
-/* Tooltip on hover */
-.floating-nav a::after {
+/* Tooltip labels */
+.floating-nav-left a::after {
   content: attr(title);
   position: absolute;
-  right: 22px;
+  left: 22px;
   top: 50%;
   transform: translateY(-50%);
   background: #8b1d18;
@@ -498,13 +508,13 @@ html {
   transition: opacity 0.2s ease;
 }
 
-.floating-nav a:hover::after {
+.floating-nav-left a:hover::after {
   opacity: 1;
 }
 
-/* Hide on small screens */
+/* Hide on mobile */
 @media (max-width: 900px) {
-  .floating-nav {
+  .floating-nav-left {
     display: none;
   }
 }
