@@ -447,47 +447,66 @@ footer {
 
 
 /* ---------------------------- */
-/* Left-side floating navigation */
+/* Left-side Floating Navigation */
+/* ---------------------------- */
 .floating-nav-left {
-  position: fixed;        /* floats while scrolling */
-  top: 120px;             /* distance from top, adjust for header */
-  left: 15px;             /* distance from left edge */
+  position: fixed;         /* floats while scrolling */
+  top: 120px;              /* adjust depending on header height */
+  left: 15px;              /* distance from left edge */
   display: flex;
   flex-direction: column;
   gap: 12px;
-  background: #8b1d18;    /* red block */
-  padding: 10px 14px;
+  background: #8b1d18;     /* red block */
+  padding: 10px 16px;      /* spacing around text */
   border-radius: 8px;
   z-index: 1000;
+  width: max-content;      /* auto width based on text */
+  min-width: 130px;        /* optional: minimum width */
+  box-sizing: border-box;  /* include padding in width */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* subtle shadow */
 }
 
 /* Links inside nav */
 .floating-nav-left a {
-  color: #fff;           /* text color */
+  color: #fff;             /* white text */
   text-decoration: none;
   font-weight: 600;
   font-size: 0.95rem;
   padding: 6px 10px;
   border-radius: 4px;
-  transition: background 0.2s ease;
   display: block;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
 }
 
 /* Hover effect */
 .floating-nav-left a:hover {
-  background: #f4c430;   /* gold accent */
-  color: #8b1d18;        /* text color change */
+  background: #f4c430;     /* gold highlight */
+  color: #8b1d18;          /* text color on hover */
+  transform: translateX(2px); /* slight movement for effect */
 }
 
-/* Optional active look (if you want to mark first section) */
+/* Optional: active section styling */
 .floating-nav-left a.active {
   background: #f4c430;
   color: #8b1d18;
 }
 
-/* Hide on small screens */
+/* Optional: add dot before each link for extra style */
+.floating-nav-left a::before {
+  content: '•';
+  color: #f4c430;
+  margin-right: 6px;
+  font-weight: bold;
+}
+
+/* Hide nav on smaller screens */
 @media (max-width: 900px) {
   .floating-nav-left {
     display: none;
   }
+}
+
+/* Smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
 }
